@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+$(document).on('click', 'a[href^="#"]', function(e) {
+    var id = $(this).attr('href');
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+    var pos = $(id).offset().top;
+    $('body, html').animate({scrollTop: pos});
+});
+</script>
+<style> 
+body {
+	margin: 0px;
+}
+
+.all_divs {
+	height: 775px;
+    width: 100%;
+}
+
+#home_div {
+	background: black;
+}
+
+#story_div_1 {
+	background: #fff;
+}
+
+#story_div_2 {
+	background: #f9fb00;
+}
+
+#story_div_3 {
+	background: #02feff;
+}
+
+#story_div_4 {
+	background: #01ff00;
+}
+
+#story_div_5 {
+	background: #fd00fb;
+}
+
+#story_div_6 {
+	background: #fb0102;
+}
+
+#story_div_7 {
+	background: #0301fc;
+}
+
+.div {
+    width: 300px;
+    height: 50px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width .5s;
+    text-align: center;
+}
+
+#nav {
+	float: left;
+    margin: 10px;
+}
+
+#div1 {
+	background: #fff;
+}
+#div2 {
+	background: #f9fb00;
+}
+#div3 {
+	background: #02feff;
+}
+#div4 {
+	background: #01ff00;
+}
+#div5 {
+	background: #fd00fb;
+}
+#div6 {
+	background: #fb0102;
+}
+#div7 {
+	background: #0301fc;
+}
+
+.div:hover {
+    width: 350px;
+}
+
+span {
+	display:inline-block;
+    padding-top: 15px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+#div1 span {
+	color: #000;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="all_divs" id="home_div">
+<div id="nav">
+<a href="#story_div_1"><div class="div" id="div1"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_2"><div class="div" id="div2"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_3"><div class="div" id="div3"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_4"><div class="div" id="div4"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_5"><div class="div" id="div5"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_6"><div class="div" id="div6"><span>TEST TEST TEST TEST</span></div></a>
+<a href="#story_div_7"><div class="div" id="div7"><span>TEST TEST TEST TEST</span></div></a>
+</div>
+</div>
+<div class="all_divs" id="story_div_1"></div>
+<div class="all_divs" id="story_div_2"></div>
+<div class="all_divs" id="story_div_3"></div>
+<div class="all_divs" id="story_div_4"></div>
+<div class="all_divs" id="story_div_5"></div>
+<div class="all_divs" id="story_div_6"></div>
+<div class="all_divs" id="story_div_7"></div>
+
+</body>
+</html>
